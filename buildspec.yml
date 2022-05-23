@@ -4,7 +4,7 @@ phases:
     on-failure: ABORT | CONTINUE
     commands:
       - echo Login in to ECR...
-      - $(aws ecr get-login-password --no-include-email --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com)
+      - $(aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com)
   build:
     on-failure: ABORT | CONTINUE
     commands:
