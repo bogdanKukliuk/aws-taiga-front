@@ -4,8 +4,8 @@ phases:
   install:
     on-failure: ABORT | CONTINUE
     commands:
-      - echo Install python3...
-      - apt install python3 -y
+      - echo Install ...
+      - apt install nginx -y
   pre_build:
     on-failure: ABORT | CONTINUE
     commands:
