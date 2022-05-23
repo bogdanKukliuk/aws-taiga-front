@@ -4,6 +4,9 @@ phases:
     on-failure: ABORT | CONTINUE
     commands:
       - echo Login in to ECR...
+      - AWS_ACCOUNT_ID = 049115486379
+      - IMAGE_REPO_NAME = taiga-front
+      - IMAGE_TAG = latest
       - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 049115486379.dkr.ecr.eu-north-1.amazonaws.com
   build:
     on-failure: ABORT | CONTINUE
