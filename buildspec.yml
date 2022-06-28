@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Login in to ECR...
       - export AWS_ACCOUNT_ID=049115486379
-      - export IMAGE_REPO_NAME=taiga-front
+      - export IMAGE_REPO_NAME=front_taiga
       - export IMAGE_TAG=latest
       - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 049115486379.dkr.ecr.eu-north-1.amazonaws.com
   build:
